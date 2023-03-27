@@ -48,7 +48,7 @@
             app:elevation="6dp"
             android:textColor="@color/color_primary"
             android:textAllCaps="true"
-            android:text="Create new project"
+            android:text="@string/myprojects_list_menu_title_create_a_new_project"
             app:fabSize="normal"
             app:iconTint="@color/color_primary"
             app:layout_anchorGravity="center" />
