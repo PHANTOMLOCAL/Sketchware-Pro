@@ -26,7 +26,7 @@ import a.a.a.bB;
 import a.a.a.jC;
 import a.a.a.mB;
 import a.a.a.oq;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import a.a.a.xB;
 
 public class ViewEvents extends LinearLayout {
@@ -47,7 +47,7 @@ public class ViewEvents extends LinearLayout {
     }
 
     private void initialize(Context context) {
-        DimensionUtils.inflate(context, this, R.layout.view_events);
+        wB.a(context, this, R.layout.view_events);
         events = new ArrayList<>();
         eventsList = findViewById(R.id.list_events);
         eventsList.setHasFixedSize(true);

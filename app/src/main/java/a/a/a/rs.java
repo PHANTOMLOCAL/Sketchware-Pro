@@ -393,7 +393,7 @@ public class rs extends qA implements View.OnClickListener, MoreblockImporterDia
         aB aBVar = new aB(getActivity());
         aBVar.b(xB.b().a(getContext(), R.string.logic_more_block_favorites_save_title));
         aBVar.a(R.drawable.ic_bookmark_red_48dp);
-        View a2 = DimensionUtils.inflate(getContext(), R.layout.property_popup_save_to_favorite);
+        View a2 = wB.a(getContext(), R.layout.property_popup_save_to_favorite);
         ((TextView) a2.findViewById(R.id.tv_favorites_guide)).setText(xB.b().a(getContext(), R.string.logic_more_block_favorites_save_guide));
         EditText editText = a2.findViewById(R.id.ed_input);
         editText.setPrivateImeOptions("defaultInputmode=english;");
@@ -488,7 +488,7 @@ public class rs extends qA implements View.OnClickListener, MoreblockImporterDia
         dialog.b(xB.b().a(getContext(), R.string.logic_more_block_title_change_block_name));
         dialog.a(R.drawable.more_block_96dp);
 
-        View customView = DimensionUtils.inflate(getContext(), R.layout.property_popup_save_to_favorite);
+        View customView = wB.a(getContext(), R.layout.property_popup_save_to_favorite);
         ((TextView) customView.findViewById(R.id.tv_favorites_guide)).setText(xB.b().a(getContext(), R.string.logic_more_block_desc_change_block_name));
         EditText newName = customView.findViewById(R.id.ed_input);
         newName.setPrivateImeOptions("defaultInputmode=english;");

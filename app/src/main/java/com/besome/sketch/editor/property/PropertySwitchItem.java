@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.sketchware.remod.R;
 
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 
 public class PropertySwitchItem extends RelativeLayout implements View.OnClickListener {
 
@@ -25,7 +25,7 @@ public class PropertySwitchItem extends RelativeLayout implements View.OnClickLi
     }
 
     private void initialize(Context context) {
-        DimensionUtils.inflate(context, this, R.layout.property_switch_item);
+        wB.a(context, this, R.layout.property_switch_item);
         tvName = findViewById(R.id.tv_name);
         tvDesc = findViewById(R.id.tv_desc);
         switchValue = findViewById(R.id.switch_value);

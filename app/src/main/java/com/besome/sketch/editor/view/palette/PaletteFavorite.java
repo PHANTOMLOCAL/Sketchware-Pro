@@ -12,7 +12,7 @@ import com.sketchware.remod.R;
 import java.util.ArrayList;
 
 import a.a.a.uy;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 
 public class PaletteFavorite extends LinearLayout {
     private LinearLayout collectionWidgets;
@@ -39,7 +39,7 @@ public class PaletteFavorite extends LinearLayout {
     }
 
     private void initialize(Context context) {
-        DimensionUtils.inflate(context, this, R.layout.palette_favorite);
+        wB.a(context, this, R.layout.palette_favorite);
         collectionWidgets = findViewById(R.id.widget);
         scrollView = findViewById(R.id.scv);
     }

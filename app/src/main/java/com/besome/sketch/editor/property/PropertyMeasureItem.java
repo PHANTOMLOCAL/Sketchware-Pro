@@ -18,7 +18,7 @@ import a.a.a.TB;
 import a.a.a.aB;
 import a.a.a.mB;
 import a.a.a.sq;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import mod.hey.studios.util.Helper;
 
 @SuppressLint("ViewConstructor")
@@ -112,7 +112,7 @@ public class PropertyMeasureItem extends RelativeLayout implements View.OnClickL
     }
 
     private void initialize(Context context, boolean z) {
-        DimensionUtils.inflate(context, this, R.layout.property_selector_item);
+        wB.a(context, this, R.layout.property_selector_item);
         tvName = findViewById(R.id.tv_name);
         tvValue = findViewById(R.id.tv_value);
         imgLeftIcon = findViewById(R.id.img_left_icon);
@@ -129,7 +129,7 @@ public class PropertyMeasureItem extends RelativeLayout implements View.OnClickL
         dialog.b(tvName.getText().toString());
         dialog.a(imgLeftIconDrawableResId);
 
-        View view = DimensionUtils.inflate(getContext(), R.layout.property_popup_measurement);
+        View view = wB.a(getContext(), R.layout.property_popup_measurement);
         EditText ed_input = view.findViewById(R.id.ed_input);
         RadioGroup rg_width_height = view.findViewById(R.id.rg_width_height);
         TB tb = new TB(getContext(), view.findViewById(R.id.ti_input), 0, 999);

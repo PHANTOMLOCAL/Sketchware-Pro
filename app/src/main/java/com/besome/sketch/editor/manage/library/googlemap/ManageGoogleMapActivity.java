@@ -40,7 +40,7 @@ import a.a.a.bB;
 import a.a.a.iC;
 import a.a.a.lC;
 import a.a.a.mB;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import a.a.a.wq;
 import a.a.a.yB;
 import mod.hey.studios.util.Helper;
@@ -101,7 +101,7 @@ public class ManageGoogleMapActivity extends BaseAppCompatActivity implements Vi
         final aB dialog = new aB(this);
         dialog.b(Helper.getResString(R.string.design_library_title_select_project));
         dialog.a(R.drawable.widget_google_map);
-        View rootView = DimensionUtils.inflate(this, R.layout.manage_library_popup_project_selector);
+        View rootView = wB.a(this, R.layout.manage_library_popup_project_selector);
         RecyclerView projectRecyclerView = rootView.findViewById(R.id.list);
         projectRecyclerView.setHasFixedSize(true);
         projectRecyclerView.setLayoutManager(new LinearLayoutManager(this));

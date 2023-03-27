@@ -35,6 +35,7 @@ import com.besome.sketch.projects.MyProjectButton;
 import com.besome.sketch.projects.MyProjectButtonLayout;
 import com.besome.sketch.projects.MyProjectSettingActivity;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.sketchware.remod.R;
 
 import java.io.File;
@@ -48,7 +49,7 @@ import a.a.a.MA;
 import a.a.a.gB;
 import a.a.a.lC;
 import a.a.a.mB;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import a.a.a.wq;
 import a.a.a.yB;
 import mod.hey.studios.project.ProjectSettingsDialog;
@@ -121,13 +122,13 @@ public class ProjectsFragment extends DA implements View.OnClickListener {
 
         collapseAnimatorSet = new AnimatorSet();
         expandAnimatorSet = new AnimatorSet();
-        ValueAnimator collapseValueAnimator = ValueAnimator.ofFloat(DimensionUtils.dpToPx(getContext(), 96.0F), DimensionUtils.dpToPx(getContext(), 48.0F));
+        ValueAnimator collapseValueAnimator = ValueAnimator.ofFloat(wB.a(getContext(), 96.0F), wB.a(getContext(), 48.0F));
         collapseValueAnimator.addUpdateListener(valueAnimator -> {
             float value = (Float) valueAnimator.getAnimatedValue();
             cvRestoreProjects.getLayoutParams().height = (int) value;
             cvRestoreProjects.requestLayout();
         });
-        ValueAnimator expandValueAnimator = ValueAnimator.ofFloat(DimensionUtils.dpToPx(getContext(), 48.0F), DimensionUtils.dpToPx(getContext(), 96.0F));
+        ValueAnimator expandValueAnimator = ValueAnimator.ofFloat(wB.a(getContext(), 48.0F), wB.a(getContext(), 96.0F));
         expandValueAnimator.addUpdateListener(valueAnimator -> {
             float value = (Float) valueAnimator.getAnimatedValue();
             cvRestoreProjects.getLayoutParams().height = (int) value;

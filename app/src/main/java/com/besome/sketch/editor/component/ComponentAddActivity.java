@@ -45,7 +45,7 @@ import a.a.a.bB;
 import a.a.a.jC;
 import a.a.a.mB;
 import a.a.a.uq;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.components.ComponentsHandler;
 
@@ -507,8 +507,8 @@ public class ComponentAddActivity extends BaseDialogActivity implements View.OnC
         @Override
         @NonNull
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View itemView = DimensionUtils.inflate(parent.getContext(), R.layout.component_add_item);
-            int lengthAndWidth = (int) DimensionUtils.dpToPx(parent.getContext(), 76.0f);
+            View itemView = wB.a(parent.getContext(), R.layout.component_add_item);
+            int lengthAndWidth = (int) wB.a(parent.getContext(), 76.0f);
             itemView.setLayoutParams(new FlexboxLayoutManager.LayoutParams(lengthAndWidth, lengthAndWidth));
             return new ViewHolder(itemView);
         }
@@ -541,7 +541,7 @@ public class ComponentAddActivity extends BaseDialogActivity implements View.OnC
                     int[] recyclerViewLocationInWindow = new int[2];
                     recyclerView.getLocationInWindow(recyclerViewLocationInWindow);
                     int i = itemViewLocationInWindow[0] - recyclerViewLocationInWindow[0];
-                    w.put(layoutPosition, new Pair<>(i, (int) (((float) (itemViewLocationInWindow[1] - recyclerViewLocationInWindow[1])) - DimensionUtils.dpToPx(getApplicationContext(), 16.0f))));
+                    w.put(layoutPosition, new Pair<>(i, (int) (((float) (itemViewLocationInWindow[1] - recyclerViewLocationInWindow[1])) - wB.a(getApplicationContext(), 16.0f))));
                     notifyDataSetChanged();
                 }
             }

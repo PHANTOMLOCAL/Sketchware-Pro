@@ -56,8 +56,8 @@ public class bB {
             toast.setDuration(duration);
             toast.setGravity(
                     gravity,
-                    (int) DimensionUtils.dpToPx(context, xOffset),
-                    (int) DimensionUtils.dpToPx(context, yOffset)
+                    (int) wB.a(context, xOffset),
+                    (int) wB.a(context, yOffset)
             );
             toast.setView(inflate);
             return toast;

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 import a.a.a.Uu;
 import a.a.a.gB;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import mod.hey.studios.util.Helper;
 
 public class ReviewStepView extends LinearLayout implements Uu {
@@ -44,7 +44,7 @@ public class ReviewStepView extends LinearLayout implements Uu {
 
     @SuppressLint("SetTextI18n")
     private void initialize(Context context) {
-        DimensionUtils.inflate(context, this, R.layout.manage_library_admob_preview);
+        wB.a(context, this, R.layout.manage_library_admob_preview);
         gB.b(this, 600, 200, null);
         bannerName = findViewById(R.id.tv_banner_name);
         bannerId = findViewById(R.id.tv_banner_id);

@@ -9,7 +9,7 @@ import android.widget.RatingBar;
 import com.besome.sketch.beans.ViewBean;
 
 import a.a.a.sy;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 
 public class ItemRatingBar extends RatingBar implements sy {
 
@@ -22,7 +22,7 @@ public class ItemRatingBar extends RatingBar implements sy {
 
     public ItemRatingBar(Context context) {
         super(context);
-        paddingFactor = (int) DimensionUtils.dpToPx(context, 1.0f);
+        paddingFactor = (int) wB.a(context, 1.0f);
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(0x9599d5d0);
         rect = new Rect();

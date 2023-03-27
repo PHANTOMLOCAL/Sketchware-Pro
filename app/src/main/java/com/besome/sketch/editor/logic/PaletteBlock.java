@@ -13,7 +13,7 @@ import com.sketchware.remod.R;
 
 import a.a.a.Rs;
 import a.a.a.Ts;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 
 public class PaletteBlock extends LinearLayout {
 
@@ -71,12 +71,12 @@ public class PaletteBlock extends LinearLayout {
 
     private void initialize(Context context) {
         a = context;
-        DimensionUtils.inflate(context, this, R.layout.palette_block);
+        wB.a(context, this, R.layout.palette_block);
         PaletteSelector paletteSelector = findViewById(R.id.palette_selector);
         customScrollView = findViewById(R.id.scv);
         horizontalScrollView = findViewById(R.id.hscv);
         blockBuilder = findViewById(R.id.block_builder);
-        f = DimensionUtils.dpToPx(a, 1.0F);
+        f = wB.a(a, 1.0F);
     }
 
     public void a(String title, int color) {

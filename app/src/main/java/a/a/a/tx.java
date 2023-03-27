@@ -53,7 +53,7 @@ public class tx extends RelativeLayout implements View.OnClickListener {
     }
 
     public final LinearLayout a(String var1, boolean var2) {
-        float var3 = DimensionUtils.dpToPx(getContext(), 1.0F);
+        float var3 = wB.a(getContext(), 1.0F);
         LinearLayout var4 = new LinearLayout(getContext());
         var4.setLayoutParams(new LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -108,7 +108,7 @@ public class tx extends RelativeLayout implements View.OnClickListener {
         var2.setTag(var1);
         LayoutParams var3 = new LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
-                (int) (DimensionUtils.dpToPx(getContext(), 1.0F) * 60.0F));
+                (int) (wB.a(getContext(), 1.0F) * 60.0F));
         var2.setGravity(Gravity.CENTER | Gravity.LEFT);
         var2.setLayoutParams(var3);
         return var2;
@@ -118,7 +118,7 @@ public class tx extends RelativeLayout implements View.OnClickListener {
         aB dialog = new aB((Activity) getContext());
         dialog.b(e.getText().toString());
         dialog.a(m);
-        View var2 = DimensionUtils.inflate(getContext(), R.layout.property_popup_selector_color);
+        View var2 = wB.a(getContext(), R.layout.property_popup_selector_color);
         ScrollView var3 = var2.findViewById(R.id.scroll_view);
         i = var2.findViewById(R.id.rg);
         j = var2.findViewById(R.id.content);
@@ -173,7 +173,7 @@ public class tx extends RelativeLayout implements View.OnClickListener {
     }
 
     public final void a(Context var1, boolean var2, boolean var3) {
-        DimensionUtils.inflate(var1, this, R.layout.property_resource_item);
+        wB.a(var1, this, R.layout.property_resource_item);
         e = findViewById(R.id.tv_name);
         f = findViewById(R.id.tv_value);
         g = findViewById(R.id.view_image);

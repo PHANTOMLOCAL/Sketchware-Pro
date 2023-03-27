@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 
 import a.a.a.Lx;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import mod.SketchwareUtil;
 
 /**
@@ -255,7 +255,7 @@ public class CodeEditorLayout extends LinearLayout implements TextWatcher {
     }
 
     private void initialize(int res) {
-        View convertView = DimensionUtils.inflate(context, this, res);
+        View convertView = wB.a(context, this, res);
 
         editText = convertView.findViewById(EDITTEXT_RES);
         scrollView = convertView.findViewById(SCROLLVIEW_RES);

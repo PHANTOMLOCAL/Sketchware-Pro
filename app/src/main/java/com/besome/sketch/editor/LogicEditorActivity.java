@@ -104,7 +104,7 @@ import a.a.a.mB;
 import a.a.a.oB;
 import a.a.a.sq;
 import a.a.a.uq;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import a.a.a.wq;
 import a.a.a.xB;
 import a.a.a.xq;
@@ -296,7 +296,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         aB aBVar = new aB(this);
         aBVar.b(xB.b().a(getContext(), R.string.logic_editor_title_add_new_list));
         aBVar.a(R.drawable.add_96_blue);
-        View a2 = DimensionUtils.inflate(this, R.layout.logic_popup_add_list);
+        View a2 = wB.a(this, R.layout.logic_popup_add_list);
         RadioGroup radioGroup = a2.findViewById(R.id.rg_type);
         EditText editText = a2.findViewById(R.id.ed_input);
         ((TextInputLayout) a2.findViewById(R.id.ti_input)).setHint(xB.b().a(getContext(), R.string.logic_editor_hint_enter_variable_name));
@@ -331,7 +331,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         dialog.b(xB.b().a(getContext(), R.string.logic_editor_title_add_new_variable));
         dialog.a(R.drawable.add_96_blue);
 
-        View customView = DimensionUtils.inflate(this, R.layout.logic_popup_add_variable);
+        View customView = wB.a(this, R.layout.logic_popup_add_variable);
         RadioGroup radioGroup = customView.findViewById(R.id.rg_type);
         EditText editText = customView.findViewById(R.id.ed_input);
         ((TextInputLayout) customView.findViewById(R.id.ti_input)).setHint(xB.b().a(getContext(), R.string.logic_editor_hint_enter_variable_name));
@@ -372,7 +372,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         aB aBVar = new aB(this);
         aBVar.b(xB.b().a(getContext(), R.string.logic_editor_title_remove_list));
         aBVar.a(R.drawable.delete_96);
-        View a2 = DimensionUtils.inflate(this, R.layout.property_popup_selector_single);
+        View a2 = wB.a(this, R.layout.property_popup_selector_single);
         ViewGroup viewGroup = a2.findViewById(R.id.rg_content);
         for (Pair<Integer, String> list : jC.a(B).j(M.getJavaName())) {
             viewGroup.addView(e(list.second));
@@ -404,7 +404,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         aB aBVar = new aB(this);
         aBVar.b(xB.b().a(getContext(), R.string.logic_editor_title_remove_variable));
         aBVar.a(R.drawable.delete_96);
-        View a2 = DimensionUtils.inflate(this, R.layout.property_popup_selector_single);
+        View a2 = wB.a(this, R.layout.property_popup_selector_single);
         ViewGroup viewGroup = a2.findViewById(R.id.rg_content);
         for (Pair<Integer, String> next : jC.a(B).k(M.getJavaName())) {
             RadioButton e = e(next.second);
@@ -523,7 +523,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
 
     public final LinearLayout a(String str, boolean z) {
         Uri fromFile;
-        float a2 = DimensionUtils.dpToPx(this, 1.0f);
+        float a2 = wB.a(this, 1.0f);
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (60.0f * a2)));
         linearLayout.setGravity(Gravity.CENTER | Gravity.LEFT);
@@ -704,7 +704,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         }
 
         dialog.a(R.drawable.ic_picture_48dp);
-        View customView = DimensionUtils.inflate(this, R.layout.property_popup_selector_color);
+        View customView = wB.a(this, R.layout.property_popup_selector_color);
         RadioGroup radioGroup = customView.findViewById(R.id.rg);
         LinearLayout content = customView.findViewById(R.id.content);
         ArrayList<String> images = jC.d(B).m();
@@ -723,7 +723,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
             radioButton.setGravity(Gravity.CENTER | Gravity.LEFT);
             radioButton.setLayoutParams(new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
-                    (int) (DimensionUtils.dpToPx(this, 1f) * 60)));
+                    (int) (wB.a(this, 1f) * 60)));
 
             radioGroup.addView(radioButton);
             if (image.equals(ss.getArgValue())) {
@@ -763,7 +763,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         aB aBVar = new aB(this);
         aBVar.b(xB.b().a(getContext(), z ? R.string.logic_editor_title_enter_number_value : R.string.logic_editor_title_enter_string_value));
         aBVar.a(R.drawable.rename_96_blue);
-        View a2 = DimensionUtils.inflate(this, R.layout.property_popup_input_text);
+        View a2 = wB.a(this, R.layout.property_popup_input_text);
         EditText editText = a2.findViewById(R.id.ed_input);
         if (z) {
             editText.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_NUMBER_FLAG_SIGNED);
@@ -1244,7 +1244,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         RadioButton radioButton = new RadioButton(this);
         radioButton.setText("");
         radioButton.setTag(fontName);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, (int) (DimensionUtils.dpToPx(this, 1.0f) * 60.0f));
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, (int) (wB.a(this, 1.0f) * 60.0f));
         radioButton.setGravity(Gravity.CENTER | Gravity.LEFT);
         radioButton.setLayoutParams(layoutParams);
         return radioButton;
@@ -1260,7 +1260,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
     }
 
     public final void b(Ss ss) {
-        View a2 = DimensionUtils.inflate(this, R.layout.color_picker);
+        View a2 = wB.a(this, R.layout.color_picker);
         a2.setAnimation(AnimationUtils.loadAnimation(this, R.anim.abc_fade_in));
         Zx zx = new Zx(a2, this, (ss.getArgValue() == null || ss.getArgValue().toString().length() <= 0 || ss.getArgValue().toString().indexOf("0xFF") != 0) ? 0 : Color.parseColor(ss.getArgValue().toString().replace("0xFF", "#")), true, false);
         zx.a(i -> {
@@ -1278,7 +1278,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         aB aBVar = new aB(this);
         aBVar.b(xB.b().a(getContext(), R.string.logic_more_block_title_change_block_name));
         aBVar.a(R.drawable.more_block_96dp);
-        View a2 = DimensionUtils.inflate(getBaseContext(), R.layout.property_popup_save_to_favorite);
+        View a2 = wB.a(getBaseContext(), R.layout.property_popup_save_to_favorite);
         ((TextView) a2.findViewById(R.id.tv_favorites_guide)).setText(xB.b().a(getContext(), R.string.logic_more_block_desc_change_block_name));
         EditText editText = a2.findViewById(R.id.ed_input);
         editText.setPrivateImeOptions("defaultInputmode=english;");
@@ -1352,7 +1352,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         aB aBVar = new aB(this);
         aBVar.b(xB.b().a(getContext(), R.string.logic_block_favorites_save_title));
         aBVar.a(R.drawable.ic_bookmark_red_48dp);
-        View a2 = DimensionUtils.inflate(this, R.layout.property_popup_save_to_favorite);
+        View a2 = wB.a(this, R.layout.property_popup_save_to_favorite);
         ((TextView) a2.findViewById(R.id.tv_favorites_guide)).setText(xB.b().a(getContext(), R.string.logic_block_favorites_save_guide));
         EditText editText = a2.findViewById(R.id.ed_input);
         editText.setPrivateImeOptions("defaultInputmode=english;");
@@ -1375,7 +1375,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         aB aBVar = new aB(this);
         aBVar.b(xB.b().a(getContext(), R.string.logic_editor_title_enter_string_value));
         aBVar.a(R.drawable.rename_96_blue);
-        View a2 = DimensionUtils.inflate(this, R.layout.property_popup_input_text);
+        View a2 = wB.a(this, R.layout.property_popup_input_text);
         ((TextInputLayout) a2.findViewById(R.id.ti_input)).setHint(xB.b().a(this, R.string.property_hint_enter_value));
         EditText editText = a2.findViewById(R.id.ed_input);
         editText.setSingleLine(true);
@@ -1430,7 +1430,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
 
     private LinearLayout getFontPreview(String fontName) {
         LinearLayout linearLayout = new LinearLayout(this);
-        linearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (DimensionUtils.dpToPx(this, 1.0f) * 60.0f)));
+        linearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (wB.a(this, 1.0f) * 60.0f)));
         linearLayout.setGravity(Gravity.CENTER | Gravity.LEFT);
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
         TextView name = new TextView(this);
@@ -1464,7 +1464,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         RadioButton radioButton = new RadioButton(this);
         radioButton.setText(str + " : " + str2);
         radioButton.setTag(str2);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (DimensionUtils.dpToPx(this, 1.0f) * 40.0f));
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (wB.a(this, 1.0f) * 40.0f));
         radioButton.setGravity(Gravity.CENTER | Gravity.LEFT);
         radioButton.setLayoutParams(layoutParams);
         return radioButton;
@@ -1501,7 +1501,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         dialog.b(xB.b().a(getContext(), R.string.logic_editor_title_select_font));
         dialog.a(R.drawable.abc_96_color);
 
-        View customView = DimensionUtils.inflate(this, R.layout.property_popup_selector_color);
+        View customView = wB.a(this, R.layout.property_popup_selector_color);
         RadioGroup radioGroup = customView.findViewById(R.id.rg);
         LinearLayout linearLayout = customView.findViewById(R.id.content);
         ArrayList<String> fontNames = jC.d(B).k();
@@ -1610,8 +1610,8 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         RadioButton radioButton = new RadioButton(this);
         radioButton.setText(str);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        layoutParams.topMargin = (int) DimensionUtils.dpToPx(getContext(), 4.0f);
-        layoutParams.bottomMargin = (int) DimensionUtils.dpToPx(getContext(), 4.0f);
+        layoutParams.topMargin = (int) wB.a(getContext(), 4.0f);
+        layoutParams.bottomMargin = (int) wB.a(getContext(), 4.0f);
         radioButton.setGravity(Gravity.CENTER | Gravity.LEFT);
         radioButton.setLayoutParams(layoutParams);
         return radioButton;
@@ -1621,7 +1621,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         aB aBVar = new aB(this);
         aBVar.b(xB.b().a(getContext(), R.string.logic_editor_title_enter_data_value));
         aBVar.a(R.drawable.rename_96_blue);
-        View a2 = DimensionUtils.inflate(this, R.layout.property_popup_input_intent_data);
+        View a2 = wB.a(this, R.layout.property_popup_input_intent_data);
         ((TextView) a2.findViewById(R.id.tv_desc_intent_usage)).setText(xB.b().a(getContext(), R.string.property_description_component_intent_usage));
         EditText editText = a2.findViewById(R.id.ed_input);
         ((TextInputLayout) a2.findViewById(R.id.ti_input)).setHint(xB.b().a(this, R.string.property_hint_enter_value));
@@ -1671,10 +1671,10 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
                 i3 = i4;
             }
             if (2 == i) {
-                i2 = i3 - ((int) DimensionUtils.dpToPx(this, 320.0f));
+                i2 = i3 - ((int) wB.a(this, 320.0f));
                 a2 = ViewGroup.LayoutParams.MATCH_PARENT;
             } else {
-                a2 = ((i3 - GB.a(getContext())) - GB.f(getContext())) - ((int) DimensionUtils.dpToPx(this, 240.0f));
+                a2 = ((i3 - GB.a(getContext())) - GB.f(getContext())) - ((int) wB.a(this, 240.0f));
             }
             layoutParams = new LinearLayout.LayoutParams(i2, a2);
         } else {
@@ -1687,7 +1687,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
     public void f(Ss ss) {
         String str;
         aB dialog = new aB(this);
-        View a2 = DimensionUtils.inflate(this, R.layout.property_popup_selector_single);
+        View a2 = wB.a(this, R.layout.property_popup_selector_single);
         ViewGroup viewGroup = a2.findViewById(R.id.rg_content);
         String xmlName = M.getXmlName();
         if (D.equals("onBindCustomView") && (str = jC.a(B).c(M.getXmlName(), C).customView) != null) {
@@ -1798,7 +1798,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         RelativeLayout.LayoutParams layoutParams;
         int i2;
         if (2 == i) {
-            K.setLayoutParams(new LinearLayout.LayoutParams((int) DimensionUtils.dpToPx(this, 320.0f), ViewGroup.LayoutParams.MATCH_PARENT));
+            K.setLayoutParams(new LinearLayout.LayoutParams((int) wB.a(this, 320.0f), ViewGroup.LayoutParams.MATCH_PARENT));
             LinearLayout.LayoutParams layoutParams2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             layoutParams2.gravity = Gravity.CENTER | Gravity.BOTTOM;
             int dimension = (int) getResources().getDimension(R.dimen.action_button_margin);
@@ -1810,7 +1810,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
             layoutParams.topMargin = GB.a(getContext());
             i2 = LinearLayout.HORIZONTAL;
         } else {
-            K.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) DimensionUtils.dpToPx(this, 240.0f)));
+            K.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) wB.a(this, 240.0f)));
             LinearLayout.LayoutParams layoutParams3 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             layoutParams3.gravity = Gravity.CENTER | Gravity.RIGHT;
             int dimension2 = (int) getResources().getDimension(R.dimen.action_button_margin);
@@ -1859,12 +1859,12 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
                 boolean var2 = X;
                 if (2 == i) {
                     if (!var2) {
-                        J.setTranslationX((float) ((int) DimensionUtils.dpToPx(this, 320.0F)));
+                        J.setTranslationX((float) ((int) wB.a(this, 320.0F)));
                         break label23;
                     }
                 } else if (!var2) {
                     J.setTranslationX(0.0F);
-                    J.setTranslationY((float) ((int) DimensionUtils.dpToPx(this, 240.0F)));
+                    J.setTranslationY((float) ((int) wB.a(this, 240.0F)));
                     break label24;
                 }
 
@@ -1877,10 +1877,10 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         ObjectAnimator var3;
         if (2 == i) {
             U = ObjectAnimator.ofFloat(J, "TranslationX", 0.0F);
-            var3 = ObjectAnimator.ofFloat(J, "TranslationX", (float) ((int) DimensionUtils.dpToPx(this, 320.0F)));
+            var3 = ObjectAnimator.ofFloat(J, "TranslationX", (float) ((int) wB.a(this, 320.0F)));
         } else {
             U = ObjectAnimator.ofFloat(J, "TranslationY", 0.0F);
-            var3 = ObjectAnimator.ofFloat(J, "TranslationY", (float) ((int) DimensionUtils.dpToPx(this, 240.0F)));
+            var3 = ObjectAnimator.ofFloat(J, "TranslationY", (float) ((int) wB.a(this, 240.0F)));
         }
 
         V = var3;
@@ -1896,7 +1896,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         dialog.b(xB.b().a(getContext(), R.string.logic_editor_title_select_sound));
         dialog.a(R.drawable.music_48);
 
-        View customView = DimensionUtils.inflate(this, R.layout.property_popup_selector_single);
+        View customView = wB.a(this, R.layout.property_popup_selector_single);
         RadioGroup radioGroup = customView.findViewById(R.id.rg_content);
         SoundPool soundPool = new SoundPool.Builder()
                 .setMaxStreams(1)
@@ -1961,7 +1961,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         aB aBVar = new aB(this);
         aBVar.b(xB.b().a(getContext(), R.string.logic_editor_title_select_typeface));
         aBVar.a(R.drawable.abc_96_color);
-        View a3 = DimensionUtils.inflate(this, R.layout.property_popup_selector_single);
+        View a3 = wB.a(this, R.layout.property_popup_selector_single);
         RadioGroup radioGroup = a3.findViewById(R.id.rg_content);
         for (Pair<Integer, String> pair : sq.a("property_text_style")) {
             RadioButton e = e(pair.second);
@@ -2251,7 +2251,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         }
         M = (ProjectFileBean) parcelable;
         H = new DB(this, "P1");
-        T = (int) DimensionUtils.dpToPx(getBaseContext(), (float) T);
+        T = (int) wB.a(getBaseContext(), (float) T);
         k = findViewById(R.id.toolbar);
         setSupportActionBar(k);
         findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
@@ -2641,7 +2641,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
                 int[] nLocationOnScreen = new int[2];
                 n.getLocationOnScreen(nLocationOnScreen);
                 int width = nLocationOnScreen[0] + (n.getWidth() / 2);
-                int a2 = nLocationOnScreen[1] + ((int) DimensionUtils.dpToPx(getContext(), 4.0f));
+                int a2 = nLocationOnScreen[1] + ((int) wB.a(getContext(), 4.0f));
                 ArrayList<BlockBean> a3 = a(arrayList2, width, a2, true);
                 int[] oLocationOnScreen = new int[2];
                 o.getLocationOnScreen(oLocationOnScreen);

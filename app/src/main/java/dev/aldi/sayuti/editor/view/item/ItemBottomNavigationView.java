@@ -13,7 +13,7 @@ import com.besome.sketch.beans.ViewBean;
 import com.sketchware.remod.R;
 
 import a.a.a.sy;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 
 public class ItemBottomNavigationView extends LinearLayout implements sy {
 
@@ -26,7 +26,7 @@ public class ItemBottomNavigationView extends LinearLayout implements sy {
 
     public ItemBottomNavigationView(Context context) {
         super(context);
-        paddingFactor = DimensionUtils.dpToPx(context, 1.0f);
+        paddingFactor = wB.a(context, 1.0f);
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(0x9599d5d0);
         rect = new Rect();

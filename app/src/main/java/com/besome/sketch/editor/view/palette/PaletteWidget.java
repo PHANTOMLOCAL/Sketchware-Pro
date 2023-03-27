@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.besome.sketch.lib.ui.CustomScrollView;
 import com.sketchware.remod.R;
 
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import dev.aldi.sayuti.editor.view.palette.IconBadgeView;
 import dev.aldi.sayuti.editor.view.palette.IconBottomNavigationView;
 import dev.aldi.sayuti.editor.view.palette.IconCardView;
@@ -175,7 +175,7 @@ public class PaletteWidget extends LinearLayout {
     }
 
     private void initialize(Context context) {
-        DimensionUtils.inflate(context, this, R.layout.palette_widget);
+        wB.a(context, this, R.layout.palette_widget);
         layoutContainer = findViewById(R.id.layout);
         widgetsContainer = findViewById(R.id.widget);
         divider = findViewById(R.id.divider);

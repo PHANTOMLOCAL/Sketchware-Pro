@@ -23,7 +23,7 @@ import a.a.a.GB;
 import a.a.a.aB;
 import a.a.a.bB;
 import a.a.a.mB;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import mod.hey.studios.util.Helper;
 
 public class ProgramInfoActivity extends BaseAppCompatActivity implements OnClickListener {
@@ -87,7 +87,7 @@ public class ProgramInfoActivity extends BaseAppCompatActivity implements OnClic
         aB dialog = new aB(this);
         dialog.b(Helper.getResString(R.string.program_information_reset_system_title));
         dialog.a(R.drawable.rollback_96);
-        View rootView = DimensionUtils.inflate(this, R.layout.all_init_popup);
+        View rootView = wB.a(this, R.layout.all_init_popup);
         RadioGroup radioGroup = rootView.findViewById(R.id.rg_type);
         ((RadioButton) rootView.findViewById(R.id.rb_all)).setText(Helper.getResString(R.string.program_information_reset_system_title_all_settings_data));
         ((RadioButton) rootView.findViewById(R.id.rb_only_config)).setText(Helper.getResString(R.string.program_information_reset_system_title_all_settings));

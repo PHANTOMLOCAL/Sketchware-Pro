@@ -321,7 +321,7 @@ public class ViewEditorFragment extends qA {
         }
 
         if (o == null) {
-            o = ObjectAnimator.ofFloat(viewProperty, View.TRANSLATION_Y, DimensionUtils.dpToPx(getActivity(), (float) viewProperty.getHeight()));
+            o = ObjectAnimator.ofFloat(viewProperty, View.TRANSLATION_Y, wB.a(getActivity(), (float) viewProperty.getHeight()));
             o.setDuration(300L);
             o.setInterpolator(new DecelerateInterpolator());
         }

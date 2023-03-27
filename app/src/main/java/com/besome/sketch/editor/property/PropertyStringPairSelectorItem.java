@@ -19,7 +19,7 @@ import a.a.a.Kw;
 import a.a.a.aB;
 import a.a.a.mB;
 import a.a.a.sq;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import mod.hey.studios.util.Helper;
 
 @SuppressLint("ViewConstructor")
@@ -93,7 +93,7 @@ public class PropertyStringPairSelectorItem extends RelativeLayout implements Vi
     }
 
     private void initialize(Context context, boolean z) {
-        DimensionUtils.inflate(context, this, R.layout.property_selector_item);
+        wB.a(context, this, R.layout.property_selector_item);
         tvName = findViewById(R.id.tv_name);
         tvValue = findViewById(R.id.tv_value);
         imgLeftIcon = findViewById(R.id.img_left_icon);
@@ -109,7 +109,7 @@ public class PropertyStringPairSelectorItem extends RelativeLayout implements Vi
         aB dialog = new aB((Activity) getContext());
         dialog.b(tvName.getText().toString());
         dialog.a(icon);
-        View view = DimensionUtils.inflate(getContext(), R.layout.property_popup_selector_single);
+        View view = wB.a(getContext(), R.layout.property_popup_selector_single);
         radioGroupContent = view.findViewById(R.id.rg_content);
         int counter = 0;
         for (Pair<String, String> pair : sq.b(key)) {
@@ -157,7 +157,7 @@ public class PropertyStringPairSelectorItem extends RelativeLayout implements Vi
         radioButton.setTag(pair.first);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
-                (int) (DimensionUtils.dpToPx(getContext(), 1.0f) * 40.0f));
+                (int) (wB.a(getContext(), 1.0f) * 40.0f));
         radioButton.setGravity(Gravity.CENTER | Gravity.LEFT);
         radioButton.setLayoutParams(layoutParams);
         return radioButton;

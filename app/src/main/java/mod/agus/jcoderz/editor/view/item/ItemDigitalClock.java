@@ -9,7 +9,7 @@ import android.widget.DigitalClock;
 import com.besome.sketch.beans.ViewBean;
 
 import a.a.a.sy;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 
 @Deprecated
 public class ItemDigitalClock extends DigitalClock implements sy {
@@ -24,7 +24,7 @@ public class ItemDigitalClock extends DigitalClock implements sy {
     @Deprecated
     public ItemDigitalClock(Context context) {
         super(context);
-        paddingFactor = (int) DimensionUtils.dpToPx(context, 1.0f);
+        paddingFactor = (int) wB.a(context, 1.0f);
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(0x9599d5d0);
         rect = new Rect();

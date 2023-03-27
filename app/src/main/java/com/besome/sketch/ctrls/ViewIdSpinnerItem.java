@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.sketchware.remod.R;
 
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 
 public class ViewIdSpinnerItem extends LinearLayout {
 
@@ -42,7 +42,7 @@ public class ViewIdSpinnerItem extends LinearLayout {
     }
 
     private void initialize(Context context) {
-        DimensionUtils.inflate(context, this, R.layout.var_id_spinner_item);
+        wB.a(context, this, R.layout.var_id_spinner_item);
         icon = findViewById(R.id.icon);
         name = findViewById(R.id.name);
         selected = findViewById(R.id.imgv_selected);

@@ -29,10 +29,10 @@ public class Ws extends RelativeLayout {
     }
 
     private void initialize(Context context) {
-        DimensionUtils.inflate(context, this, R.layout.palette_selector_item);
+        wB.a(context, this, R.layout.palette_selector_item);
         tv_category = findViewById(R.id.tv_category);
         background = findViewById(R.id.bg);
-        unselectedBackgroundWidth = (int) DimensionUtils.dpToPx(context, 4f);
+        unselectedBackgroundWidth = (int) wB.a(context, 4f);
         tv_category.setText(name);
         background.setBackgroundColor(color);
         setSelected(false);

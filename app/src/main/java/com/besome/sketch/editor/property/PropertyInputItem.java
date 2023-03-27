@@ -23,7 +23,7 @@ import a.a.a.aB;
 import a.a.a.jC;
 import a.a.a.mB;
 import a.a.a.uq;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import mod.hey.studios.util.Helper;
 
 @SuppressLint("ViewConstructor")
@@ -190,7 +190,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
 
     private void initialize(Context context, boolean z) {
         this.context = context;
-        DimensionUtils.inflate(context, this, R.layout.property_input_item);
+        wB.a(context, this, R.layout.property_input_item);
         tvName = findViewById(R.id.tv_name);
         tvValue = findViewById(R.id.tv_value);
         imgLeftIcon = findViewById(R.id.img_left_icon);
@@ -206,7 +206,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
         aB dialog = new aB((Activity) getContext());
         dialog.b(tvName.getText().toString());
         dialog.a(icon);
-        View view = DimensionUtils.inflate(getContext(), R.layout.property_popup_input_text);
+        View view = wB.a(getContext(), R.layout.property_popup_input_text);
         EditText input = view.findViewById(R.id.ed_input);
         input.setPrivateImeOptions("defaultInputmode=english;");
         input.setLines(1);
@@ -235,7 +235,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
         aB dialog = new aB((Activity) getContext());
         dialog.b(tvName.getText().toString());
         dialog.a(icon);
-        View view = DimensionUtils.inflate(getContext(), R.layout.property_popup_input_text);
+        View view = wB.a(getContext(), R.layout.property_popup_input_text);
         EditText input = view.findViewById(R.id.ed_input);
         input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED);
         input.setText(value);
@@ -257,7 +257,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
         aB dialog = new aB((Activity) getContext());
         dialog.b(tvName.getText().toString());
         dialog.a(icon);
-        View view = DimensionUtils.inflate(getContext(), R.layout.property_popup_input_text);
+        View view = wB.a(getContext(), R.layout.property_popup_input_text);
         EditText input = view.findViewById(R.id.ed_input);
         SB lengthValidator = new SB(context, view.findViewById(R.id.ti_input), minValue, maxValue);
         lengthValidator.a(value);
@@ -277,7 +277,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
         aB dialog = new aB((Activity) getContext());
         dialog.b(tvName.getText().toString());
         dialog.a(icon);
-        View view = DimensionUtils.inflate(getContext(), R.layout.property_popup_input_text);
+        View view = wB.a(getContext(), R.layout.property_popup_input_text);
         EditText input = view.findViewById(R.id.ed_input);
         input.setInputType(minValue < 0 ?
                 InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED | InputType.TYPE_NUMBER_FLAG_DECIMAL

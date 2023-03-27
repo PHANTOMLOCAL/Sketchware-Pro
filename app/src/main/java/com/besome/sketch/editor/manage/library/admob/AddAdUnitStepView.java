@@ -27,7 +27,7 @@ import a.a.a.Uu;
 import a.a.a.aB;
 import a.a.a.bB;
 import a.a.a.gB;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import mod.hey.studios.util.Helper;
 
 @SuppressLint("ViewConstructor")
@@ -46,7 +46,7 @@ public class AddAdUnitStepView extends LinearLayout implements Uu, OnClickListen
         aB dialog = new aB((Activity) getContext());
         dialog.b(Helper.getResString(R.string.design_library_admob_dialog_add_adunit_title));
         dialog.a(R.drawable.add_96_blue);
-        View rootView = DimensionUtils.inflate(getContext(), R.layout.manage_library_setting_admob_adunit_add);
+        View rootView = wB.a(getContext(), R.layout.manage_library_setting_admob_adunit_add);
         EditText edName = rootView.findViewById(R.id.ed_name);
         SB nameValidator = new SB(getContext(), rootView.findViewById(R.id.ti_name), 1, 50);
         EditText edAdUnitId = rootView.findViewById(R.id.ed_adunit_id);
@@ -86,7 +86,7 @@ public class AddAdUnitStepView extends LinearLayout implements Uu, OnClickListen
     }
 
     private void initialize(Context context) {
-        DimensionUtils.inflate(context, this, R.layout.manage_library_admob_listing);
+        wB.a(context, this, R.layout.manage_library_admob_listing);
         gB.b(this, 600, 200, null);
         findViewById(R.id.layout_manual_add_ad_unit).setOnClickListener(this);
         tvWarning = findViewById(R.id.tv_warning);

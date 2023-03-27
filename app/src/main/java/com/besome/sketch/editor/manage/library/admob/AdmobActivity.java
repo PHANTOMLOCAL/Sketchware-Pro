@@ -39,7 +39,7 @@ import a.a.a.bB;
 import a.a.a.iC;
 import a.a.a.lC;
 import a.a.a.mB;
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import a.a.a.wq;
 import a.a.a.xB;
 import a.a.a.yB;
@@ -307,7 +307,7 @@ public class AdmobActivity extends BaseAppCompatActivity implements View.OnClick
         aB dialog = new aB(this);
         dialog.b(Helper.getResString(R.string.design_library_title_select_project));
         dialog.a(R.drawable.widget_admob);
-        View rootView = DimensionUtils.inflate(this, R.layout.manage_library_popup_project_selector);
+        View rootView = wB.a(this, R.layout.manage_library_popup_project_selector);
         RecyclerView recyclerView = rootView.findViewById(R.id.list);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
