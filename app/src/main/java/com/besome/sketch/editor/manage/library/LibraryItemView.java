@@ -9,7 +9,7 @@ import com.besome.sketch.beans.ProjectLibraryBean;
 import com.google.android.material.card.MaterialCardView;
 import com.sketchware.remod.R;
 
-import a.a.a.DimensionUtils;
+import a.a.a.wB;
 import a.a.a.xB;
 
 public class LibraryItemView extends MaterialCardView {
@@ -25,7 +25,7 @@ public class LibraryItemView extends MaterialCardView {
     }
 
     public void a(int resLayout) {
-        DimensionUtils.inflate(context, this, resLayout);
+        wB.a(context, this, resLayout);
         icon = findViewById(R.id.lib_icon);
         title = findViewById(R.id.lib_title);
         description = findViewById(R.id.lib_desc);
@@ -33,13 +33,13 @@ public class LibraryItemView extends MaterialCardView {
         LayoutParams layoutParams = new LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
-        layoutParams.leftMargin = (int) DimensionUtils.dpToPx(context, 8f);
-        layoutParams.topMargin = (int) DimensionUtils.dpToPx(context, 4f);
-        layoutParams.bottomMargin = (int) DimensionUtils.dpToPx(context, 4f);
-        layoutParams.rightMargin = (int) DimensionUtils.dpToPx(context, 8f);
+        layoutParams.leftMargin = (int) wB.a(context, 8f);
+        layoutParams.topMargin = (int) wB.a(context, 4f);
+        layoutParams.bottomMargin = (int) wB.a(context, 4f);
+        layoutParams.rightMargin = (int) wB.a(context, 8f);
         setLayoutParams(layoutParams);
 
-        setRadius(DimensionUtils.dpToPx(context, 10f));
+        setRadius(wB.a(context, 10f));
     }
 
     public void setData(ProjectLibraryBean projectLibraryBean) {
