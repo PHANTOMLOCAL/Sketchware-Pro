@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.sketchware.remod.R;
 
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 
 public class MyProjectButton extends LinearLayout {
 
@@ -28,7 +28,7 @@ public class MyProjectButton extends LinearLayout {
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 1.0f));
 
-        wB.a(context, this, R.layout.myproject_button);
+        DimensionUtils.inflate(context, this, R.layout.myproject_button);
         icon = findViewById(R.id.icon);
         name = findViewById(R.id.name);
     }

@@ -15,7 +15,7 @@ import com.sketchware.remod.R;
 import a.a.a.Kw;
 import a.a.a.Zx;
 import a.a.a.mB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 
 @SuppressLint("ViewConstructor")
@@ -96,7 +96,7 @@ public class PropertyColorItem extends RelativeLayout implements View.OnClickLis
 
     private void initialize(Context context, boolean z) {
         this.context = context;
-        wB.a(context, this, R.layout.property_color_item);
+        DimensionUtils.inflate(context, this, R.layout.property_color_item);
         tvName = findViewById(R.id.tv_name);
         tvValue = findViewById(R.id.tv_value);
         viewColor = findViewById(R.id.view_color);
@@ -112,7 +112,7 @@ public class PropertyColorItem extends RelativeLayout implements View.OnClickLis
     private void showColorPicker() {
         boolean colorNoneAvailable;
         boolean colorTransparentAvailable;
-        View view = wB.a(context, R.layout.color_picker);
+        View view = DimensionUtils.inflate(context, R.layout.color_picker);
         view.setAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_in));
         if (key.equals("property_background_color")) {
             colorTransparentAvailable = true;

@@ -33,7 +33,7 @@ import a.a.a.aB;
 import a.a.a.eC;
 import a.a.a.jC;
 import a.a.a.uq;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import dev.aldi.sayuti.block.ExtraMenuBlock;
 import mod.agus.jcoderz.editor.manage.block.makeblock.BlockMenu;
 import mod.agus.jcoderz.lib.FilePathUtil;
@@ -232,7 +232,7 @@ public class ExtraMenuBean {
     private void defaultMenus(Ss menu) {
         String menuName = menu.getMenuName();
         aB dialog = new aB(logicEditor);
-        View rootView = wB.a(logicEditor, R.layout.property_popup_selector_single);
+        View rootView = DimensionUtils.inflate(logicEditor, R.layout.property_popup_selector_single);
         ViewGroup viewGroup = rootView.findViewById(R.id.rg_content);
         ArrayList<String> menus = new ArrayList<>();
         String title;
@@ -749,7 +749,7 @@ public class ExtraMenuBean {
 
         if (!isEmpty(message)) dialog.a(message);
 
-        View root = wB.a(logicEditor, R.layout.property_popup_input_text);
+        View root = DimensionUtils.inflate(logicEditor, R.layout.property_popup_input_text);
         EditText edittext = root.findViewById(R.id.ed_input);
         edittext.setImeOptions(EditorInfo.IME_ACTION_NONE);
 

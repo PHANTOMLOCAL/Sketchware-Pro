@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.sketchware.remod.R;
 
 import a.a.a.mB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 
 public class DesignDrawer extends LinearLayout implements View.OnClickListener {
@@ -39,7 +39,7 @@ public class DesignDrawer extends LinearLayout implements View.OnClickListener {
 
     private void initialize(Context context) {
         this.context = context;
-        wB.a(context, this, R.layout.design_drawer);
+        DimensionUtils.inflate(context, this, R.layout.design_drawer);
         TextView tv_title_configuration = findViewById(R.id.tv_title_configuration);
         tv_title_configuration.setText(Helper.getResString(R.string.design_drawer_menu_title));
         ((TextView) findViewById(R.id.tv_title_global)).setText(Helper.getResString(R.string.design_drawer_menu_bottom_title));
@@ -238,7 +238,7 @@ public class DesignDrawer extends LinearLayout implements View.OnClickListener {
         }
 
         public final void initialize(Context context, int tag) {
-            wB.a(context, this, R.layout.design_drawer_item);
+            DimensionUtils.inflate(context, this, R.layout.design_drawer_item);
             imgIcon = findViewById(R.id.img_icon);
             titleTextView = findViewById(R.id.tv_root_title);
             subTitleTextView = findViewById(R.id.tv_sub_title);

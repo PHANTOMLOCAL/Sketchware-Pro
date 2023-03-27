@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.sketchware.remod.R;
 
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 
 public class ColorGroupItem extends RelativeLayout {
 
@@ -16,7 +16,7 @@ public class ColorGroupItem extends RelativeLayout {
 
     public ColorGroupItem(Context context) {
         super(context);
-        wB.a(context, this, R.layout.color_picker_grid_item);
+        DimensionUtils.inflate(context, this, R.layout.color_picker_grid_item);
         b = findViewById(R.id.tv_color_name);
         c = findViewById(R.id.img_selector);
         setPadding(0, 0, 4, 0);

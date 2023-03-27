@@ -3,14 +3,14 @@ package a.a.a;
 import mod.jbk.build.BuiltInLibraries;
 import mod.jbk.build.BuiltInLibraries.BuiltInLibrary;
 
-public class qq {
+public class BuiltInLibraryUtils {
 
     /**
      * @param name A built-in library's name, e.g. material-1.0.0
      * @return A set of known dependencies for a built-in library
      * @apiNote Won't return the dependencies' sub-dependencies!
      */
-    public static String[] a(String name) {
+    public static String[] getLibraryDependencies(String name) {
         for (BuiltInLibrary library : BuiltInLibraries.KNOWN_BUILT_IN_LIBRARIES) {
             if (library.getName().equals(name)) {
                 return library.getDependencyNames().toArray(new String[0]);
@@ -24,7 +24,7 @@ public class qq {
      * @param name Built-in library name, e.g. material-1.0.0
      * @return Package name of built-in library, e.g. com.google.android.material
      */
-    public static String b(String name) {
+    public static String getLibraryPackageName(String name) {
         for (BuiltInLibrary library : BuiltInLibraries.KNOWN_BUILT_IN_LIBRARIES) {
             if (library.getName().equals(name)) {
                 return library.getPackageName().orElseThrow(IllegalStateException::new);
@@ -38,7 +38,7 @@ public class qq {
      * @param name The built-in library's name, e.g. material-1.0.0
      * @return Whether the built-in library has resources that need to be mapped to a R.java file by a resource processor
      */
-    public static boolean c(String name) {
+    public static boolean hasMappedResources(String name) {
         for (BuiltInLibrary library : BuiltInLibraries.KNOWN_BUILT_IN_LIBRARIES) {
             if (library.getName().equals(name)) {
                 return library.hasResources();

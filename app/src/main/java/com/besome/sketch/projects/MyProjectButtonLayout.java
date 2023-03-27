@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.sketchware.remod.R;
 
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 
 public class MyProjectButtonLayout extends FrameLayout {
@@ -49,7 +49,7 @@ public class MyProjectButtonLayout extends FrameLayout {
 
     private void initialize(Context context) {
         this.context = context;
-        wB.a(context, this, R.layout.myproject_buttons);
+        DimensionUtils.inflate(context, this, R.layout.myproject_buttons);
 
         buttonContainer = findViewById(R.id.project_buttons);
         confirmLayout = findViewById(R.id.confirm_layout);

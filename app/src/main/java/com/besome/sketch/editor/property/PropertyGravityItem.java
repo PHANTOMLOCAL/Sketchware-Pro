@@ -16,7 +16,7 @@ import a.a.a.Kw;
 import a.a.a.aB;
 import a.a.a.mB;
 import a.a.a.sq;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 
 @SuppressLint("ViewConstructor")
@@ -92,7 +92,7 @@ public class PropertyGravityItem extends RelativeLayout implements View.OnClickL
     }
 
     private void initialize(Context context, boolean z) {
-        wB.a(context, this, R.layout.property_selector_item);
+        DimensionUtils.inflate(context, this, R.layout.property_selector_item);
         tvName = findViewById(R.id.tv_name);
         tvValue = findViewById(R.id.tv_value);
         imgLeftIcon = findViewById(R.id.img_left_icon);
@@ -108,7 +108,7 @@ public class PropertyGravityItem extends RelativeLayout implements View.OnClickL
         aB dialog = new aB((Activity) getContext());
         dialog.b(tvName.getText().toString());
         dialog.a(icon);
-        View view = wB.a(getContext(), R.layout.property_popup_selector_gravity);
+        View view = DimensionUtils.inflate(getContext(), R.layout.property_popup_selector_gravity);
         CheckBox chk_left = view.findViewById(R.id.chk_left);
         CheckBox chk_right = view.findViewById(R.id.chk_right);
         CheckBox chk_hcenter = view.findViewById(R.id.chk_hcenter);

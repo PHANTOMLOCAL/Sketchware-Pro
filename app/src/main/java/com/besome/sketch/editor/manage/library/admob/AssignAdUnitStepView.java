@@ -21,7 +21,7 @@ import a.a.a.Uu;
 import a.a.a.aB;
 import a.a.a.bB;
 import a.a.a.gB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 
 public class AssignAdUnitStepView extends LinearLayout implements Uu, OnClickListener {
@@ -45,8 +45,8 @@ public class AssignAdUnitStepView extends LinearLayout implements Uu, OnClickLis
         RadioButton radioButton = new RadioButton(getContext());
         radioButton.setText(text);
         LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        layoutParams.topMargin = (int) wB.a(getContext(), 4F);
-        layoutParams.bottomMargin = (int) wB.a(getContext(), 4F);
+        layoutParams.topMargin = (int) DimensionUtils.dpToPx(getContext(), 4F);
+        layoutParams.bottomMargin = (int) DimensionUtils.dpToPx(getContext(), 4F);
         radioButton.setGravity(Gravity.CENTER | Gravity.LEFT);
         radioButton.setLayoutParams(layoutParams);
         return radioButton;
@@ -54,7 +54,7 @@ public class AssignAdUnitStepView extends LinearLayout implements Uu, OnClickLis
 
     private void setAdUnit(int position) {
         aB dialog = new aB((Activity) getContext());
-        View rootView = wB.a(getContext(), R.layout.property_popup_selector_single);
+        View rootView = DimensionUtils.inflate(getContext(), R.layout.property_popup_selector_single);
         ViewGroup viewGroup = rootView.findViewById(R.id.rg_content);
         dialog.b(Helper.getResString(R.string.design_library_admob_dialog_select_unit_title));
 
@@ -85,7 +85,7 @@ public class AssignAdUnitStepView extends LinearLayout implements Uu, OnClickLis
 
     @SuppressLint("SetTextI18n")
     private void initialize(Context context) {
-        wB.a(context, this, R.layout.manage_library_admob_set_unit);
+        DimensionUtils.inflate(context, this, R.layout.manage_library_admob_set_unit);
         gB.b(this, 600, 200, null);
         bannerAdName = findViewById(R.id.tv_banner_name);
         bannerAdUnitIdView = findViewById(R.id.tv_banner_id);

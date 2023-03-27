@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 import a.a.a.Vs;
 import a.a.a.Ws;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 
 public class PaletteSelector extends LinearLayout implements View.OnClickListener {
@@ -36,10 +36,10 @@ public class PaletteSelector extends LinearLayout implements View.OnClickListene
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT));
         setPadding(
-                (int) wB.a(context, 8f),
-                (int) wB.a(context, 4f),
-                (int) wB.a(context, 8f),
-                (int) wB.a(context, 4f)
+                (int) DimensionUtils.dpToPx(context, 8f),
+                (int) DimensionUtils.dpToPx(context, 4f),
+                (int) DimensionUtils.dpToPx(context, 8f),
+                (int) DimensionUtils.dpToPx(context, 4f)
         );
         initializePalettes();
     }

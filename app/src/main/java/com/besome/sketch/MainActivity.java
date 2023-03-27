@@ -33,7 +33,6 @@ import androidx.viewpager.widget.ViewPager;
 import com.besome.sketch.editor.manage.library.ProjectComparator;
 import com.besome.sketch.lib.base.BasePermissionAppCompatActivity;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.sketchware.remod.R;
@@ -48,7 +47,7 @@ import a.a.a.bB;
 import a.a.a.mB;
 import a.a.a.oB;
 import a.a.a.sB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import a.a.a.wq;
 import a.a.a.xB;
 import mod.SketchwareUtil;
@@ -281,7 +280,7 @@ public class MainActivity extends BasePermissionAppCompatActivity implements Vie
     private void showProjectSortingDialog() {
         SketchDialog dialog = new SketchDialog(this);
         dialog.setTitle("Sort options");
-        View root = wB.a(this, R.layout.sort_project_dialog);
+        View root = DimensionUtils.inflate(this, R.layout.sort_project_dialog);
         RadioButton sortByName = root.findViewById(R.id.sortByName);
         RadioButton sortByID = root.findViewById(R.id.sortByID);
         RadioButton sortOrderAsc = root.findViewById(R.id.sortOrderAsc);

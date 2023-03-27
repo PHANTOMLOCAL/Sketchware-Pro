@@ -26,7 +26,7 @@ import a.a.a.aB;
 import a.a.a.by;
 import a.a.a.jC;
 import a.a.a.mB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import a.a.a.xB;
 
 public class ProjectFileSelector extends LinearLayout implements View.OnClickListener {
@@ -162,7 +162,7 @@ public class ProjectFileSelector extends LinearLayout implements View.OnClickLis
     private void initializeFileName(Context context) {
         fileName = new TextView(context);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
-        layoutParams.leftMargin = (int) wB.a(context, 8.0f);
+        layoutParams.leftMargin = (int) DimensionUtils.dpToPx(context, 8.0f);
         layoutParams.weight = 1.0f;
         fileName.setGravity(Gravity.LEFT | Gravity.CENTER);
         fileName.setLayoutParams(layoutParams);
@@ -170,7 +170,7 @@ public class ProjectFileSelector extends LinearLayout implements View.OnClickLis
     }
 
     private void initializeDropdown(Context context) {
-        int s = (int) wB.a(context, 24.0f);
+        int s = (int) DimensionUtils.dpToPx(context, 24.0f);
         ImageView dropdown = new ImageView(context);
         dropdown.setLayoutParams(new LinearLayout.LayoutParams(s, s));
         dropdown.setImageResource(R.drawable.ic_arrow_drop_down_grey600_24dp);
@@ -181,7 +181,7 @@ public class ProjectFileSelector extends LinearLayout implements View.OnClickLis
         availableFilesDialog = new aB((Activity) getContext());
         availableFilesDialog.b(xB.b().a(getContext(), R.string.design_file_selector_title_java));
         availableFilesDialog.a(R.drawable.java_96);
-        View customView = wB.a(getContext(), R.layout.file_selector_popup_select_java);
+        View customView = DimensionUtils.inflate(getContext(), R.layout.file_selector_popup_select_java);
         RecyclerView recyclerView = customView.findViewById(R.id.file_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(new JavaFileAdapter());

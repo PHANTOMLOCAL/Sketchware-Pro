@@ -124,9 +124,9 @@ public class gt extends LinearLayout {
     }
 
     private void initialize(Activity activity) {
-        wB.a(activity, this, R.layout.var_type_spinner);
+        DimensionUtils.inflate(activity, this, R.layout.var_type_spinner);
         tvPreview = findViewById(R.id.tv_preview);
-        LinearLayout spinnerDialogLayout = (LinearLayout) wB.a(activity, R.layout.var_type_spinner_dialog);
+        LinearLayout spinnerDialogLayout = (LinearLayout) DimensionUtils.inflate(activity, R.layout.var_type_spinner_dialog);
         RecyclerView varTypeCategory = spinnerDialogLayout.findViewById(R.id.var_type_category);
         RecyclerView varTypeList = spinnerDialogLayout.findViewById(R.id.var_type_list);
         ((TextView) spinnerDialogLayout.findViewById(R.id.tv_title)).setText(xB.b().a(activity, R.string.logic_editor_more_block_title_add_variable_type));
@@ -305,7 +305,7 @@ public class gt extends LinearLayout {
         @Override
         @NonNull
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ViewHolder(wB.a(getContext(), R.layout.var_type_spinner_item));
+            return new ViewHolder(DimensionUtils.inflate(getContext(), R.layout.var_type_spinner_item));
         }
 
         private class ViewHolder extends RecyclerView.ViewHolder {

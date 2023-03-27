@@ -39,7 +39,7 @@ import a.a.a.aB;
 import a.a.a.bB;
 import a.a.a.jC;
 import a.a.a.mB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 
 public class ViewProperty extends LinearLayout implements Kw {
@@ -115,7 +115,7 @@ public class ViewProperty extends LinearLayout implements Kw {
             showAllShower.setInterpolator(new DecelerateInterpolator());
         }
         if (showAllHider == null) {
-            showAllHider = ObjectAnimator.ofFloat(layoutPropertySeeAll, View.TRANSLATION_Y, wB.a(getContext(), 84.0f));
+            showAllHider = ObjectAnimator.ofFloat(layoutPropertySeeAll, View.TRANSLATION_Y, DimensionUtils.dpToPx(getContext(), 84.0f));
             showAllHider.setDuration(200L);
             showAllHider.setInterpolator(new DecelerateInterpolator());
         }
@@ -165,7 +165,7 @@ public class ViewProperty extends LinearLayout implements Kw {
         aB dialog = new aB((Activity) getContext());
         dialog.b(Helper.getResString(R.string.view_widget_favorites_save_title));
         dialog.a(R.drawable.ic_bookmark_red_48dp);
-        View view = wB.a(getContext(), R.layout.property_popup_save_to_favorite);
+        View view = DimensionUtils.inflate(getContext(), R.layout.property_popup_save_to_favorite);
         ((TextView) view.findViewById(R.id.tv_favorites_guide)).setText(Helper.getResString(R.string.view_widget_favorites_save_guide_new));
         EditText editText = view.findViewById(R.id.ed_input);
         editText.setPrivateImeOptions("defaultInputmode=english;");
@@ -211,7 +211,7 @@ public class ViewProperty extends LinearLayout implements Kw {
     }
 
     private void initialize(Context context) {
-        wB.a(context, this, R.layout.view_property);
+        DimensionUtils.inflate(context, this, R.layout.view_property);
         layoutPropertyGroup = findViewById(R.id.layout_property_group);
         CustomHorizontalScrollView hcvProperty = findViewById(R.id.hcv_property);
         propertyLayout = findViewById(R.id.property_layout);
@@ -396,7 +396,7 @@ public class ViewProperty extends LinearLayout implements Kw {
         }
 
         private void initialize(Context context) {
-            wB.a(context, this, R.layout.property_group_item);
+            DimensionUtils.inflate(context, this, R.layout.property_group_item);
             title = findViewById(R.id.tv_title);
         }
 
@@ -423,7 +423,7 @@ public class ViewProperty extends LinearLayout implements Kw {
         public SeeAllPropertiesFloatingItem(Context context) {
             super(context);
 
-            wB.a(context, this, R.layout.property_grid_item);
+            DimensionUtils.inflate(context, this, R.layout.property_grid_item);
             propertyMenuItem = findViewById(R.id.property_menu_item);
             icon = findViewById(R.id.img_icon);
             title = findViewById(R.id.tv_title);

@@ -12,7 +12,7 @@ import com.besome.sketch.beans.ViewBean;
 import java.util.ArrayList;
 
 import a.a.a.sy;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 
 public class ItemGridView extends GridView implements sy {
 
@@ -25,9 +25,9 @@ public class ItemGridView extends GridView implements sy {
 
     public ItemGridView(Context context) {
         super(context);
-        paddingFactor = (int) wB.a(context, 1.0f);
+        paddingFactor = (int) DimensionUtils.dpToPx(context, 1.0f);
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paint.setStrokeWidth(wB.a(getContext(), 2.0f));
+        paint.setStrokeWidth(DimensionUtils.dpToPx(getContext(), 2.0f));
         rect = new Rect();
         setDrawingCacheEnabled(true);
         setNumColumns(3);

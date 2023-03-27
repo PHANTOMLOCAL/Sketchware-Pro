@@ -12,7 +12,7 @@ import com.besome.sketch.beans.ViewBean;
 import java.util.Arrays;
 
 import a.a.a.sy;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 
 public class ItemRecyclerView extends ListView implements sy {
 
@@ -25,9 +25,9 @@ public class ItemRecyclerView extends ListView implements sy {
 
     public ItemRecyclerView(Context context) {
         super(context);
-        paddingFactor = wB.a(context, 1.0f);
+        paddingFactor = DimensionUtils.dpToPx(context, 1.0f);
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paint.setStrokeWidth(wB.a(getContext(), 2.0f));
+        paint.setStrokeWidth(DimensionUtils.dpToPx(getContext(), 2.0f));
         rect = new Rect();
 
         setDrawingCacheEnabled(true);

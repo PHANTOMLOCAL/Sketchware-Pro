@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.sketchware.remod.R;
 
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 
 public class CommonSpinnerItem extends LinearLayout {
 
@@ -23,7 +23,7 @@ public class CommonSpinnerItem extends LinearLayout {
 
     private void initialize(Context context) {
         c = context;
-        wB.a(context, this, R.layout.common_spinner_item);
+        DimensionUtils.inflate(context, this, R.layout.common_spinner_item);
         b = findViewById(R.id.tv_spn_name);
         a = findViewById(R.id.imgv_selected);
     }

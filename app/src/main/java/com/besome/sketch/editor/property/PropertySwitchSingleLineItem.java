@@ -12,7 +12,7 @@ import com.sketchware.remod.R;
 
 import a.a.a.Kw;
 import a.a.a.mB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 
 @SuppressLint("ViewConstructor")
@@ -34,7 +34,7 @@ public class PropertySwitchSingleLineItem extends LinearLayout implements View.O
     }
 
     private void initialize(Context context, boolean z) {
-        wB.a(context, this, R.layout.property_switch_item_singleline);
+        DimensionUtils.inflate(context, this, R.layout.property_switch_item_singleline);
         tvName = findViewById(R.id.tv_name);
         switchValue = findViewById(R.id.switch_value);
         imgLeftIcon = findViewById(R.id.img_left_icon);

@@ -16,7 +16,7 @@ import com.sketchware.remod.R;
 import java.util.ArrayList;
 
 import a.a.a.Jw;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 
 public class ViewProperties extends RelativeLayout implements AdapterView.OnItemSelectedListener {
@@ -40,7 +40,7 @@ public class ViewProperties extends RelativeLayout implements AdapterView.OnItem
     }
 
     private void initialize(Context context) {
-        wB.a(context, this, R.layout.view_properties);
+        DimensionUtils.inflate(context, this, R.layout.view_properties);
         ((TextView) findViewById(R.id.btn_editproperties)).setText(Helper.getResString(R.string.design_button_properties));
         Spinner spinner = findViewById(R.id.spn_widget);
         spinnerItemAdapter = new SpinnerItemAdapter(context, viewsIdList);

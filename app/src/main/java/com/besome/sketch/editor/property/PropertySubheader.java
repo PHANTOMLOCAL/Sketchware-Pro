@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.sketchware.remod.R;
 
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 
 public class PropertySubheader extends RelativeLayout {
 
@@ -21,7 +21,7 @@ public class PropertySubheader extends RelativeLayout {
     }
 
     private void initialize(Context context) {
-        wB.a(context, this, R.layout.property_subheader);
+        DimensionUtils.inflate(context, this, R.layout.property_subheader);
         tvName = findViewById(R.id.tv_name);
         imgAdd = findViewById(R.id.img_add);
     }

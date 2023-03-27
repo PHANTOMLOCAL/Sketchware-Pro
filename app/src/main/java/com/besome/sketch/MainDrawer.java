@@ -27,7 +27,7 @@ import com.sketchware.remod.R;
 import a.a.a.GB;
 import a.a.a.bB;
 import a.a.a.mB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.activities.tools.Tools;
 import mod.ilyasse.activities.about.AboutModActivity;
@@ -48,7 +48,7 @@ public class MainDrawer extends LinearLayout implements View.OnClickListener {
 
     private void initialize(Context context) {
         this.context = context;
-        wB.a(context, this, R.layout.main_drawer);
+        DimensionUtils.inflate(context, this, R.layout.main_drawer);
         ImageView social_fb = findViewById(R.id.social_fb);
         ImageView social_medium = findViewById(R.id.social_medium);
         ImageView social_slack = findViewById(R.id.social_slack);

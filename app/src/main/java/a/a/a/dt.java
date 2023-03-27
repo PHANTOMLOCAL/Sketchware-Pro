@@ -257,12 +257,12 @@ public class dt extends LinearLayout {
                 width = 0;
             }
 
-            width += wB.a(activity, 4.0f);
+            width += DimensionUtils.dpToPx(activity, 4.0f);
 
             ImageView removeIcon = new ImageView(activity);
             removeIcon.setImageResource(R.drawable.ic_remove_grey600_24dp);
             removeIcon.setScaleType(ScaleType.CENTER_INSIDE);
-            removeIcon.setPadding(0, (int) wB.a(activity, 4.0F), 0, (int) wB.a(activity, 4.0F));
+            removeIcon.setPadding(0, (int) DimensionUtils.dpToPx(activity, 4.0F), 0, (int) DimensionUtils.dpToPx(activity, 4.0F));
             removeIcon.setLayoutParams(new LayoutParams(width, ViewGroup.LayoutParams.MATCH_PARENT));
             removeArea.addView(removeIcon);
             if (i == 0 && this.blockName.getText().length() > 0) {

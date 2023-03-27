@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.sketchware.remod.R;
 
 import a.a.a.mB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 
 public class BaseDialogActivity extends BaseAppCompatActivity {
 
@@ -95,6 +95,6 @@ public class BaseDialogActivity extends BaseAppCompatActivity {
 
     @Override
     public void setContentView(int layoutResID) {
-        wB.a(this, l, layoutResID);
+        DimensionUtils.inflate(this, l, layoutResID);
     }
 }

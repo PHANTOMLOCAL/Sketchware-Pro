@@ -47,7 +47,7 @@ import a.a.a.lC;
 import a.a.a.mB;
 import a.a.a.nB;
 import a.a.a.oB;
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import a.a.a.wq;
 import a.a.a.yB;
 import mod.SketchwareUtil;
@@ -320,7 +320,7 @@ public class MyProjectSettingActivity extends BaseDialogActivity implements View
         aB dialog = new aB(this);
         dialog.a(R.drawable.numbers_48);
         dialog.b(Helper.getResString(R.string.myprojects_settings_version_control_title));
-        View view = wB.a(getApplicationContext(), R.layout.property_popup_version_control);
+        View view = DimensionUtils.inflate(getApplicationContext(), R.layout.property_popup_version_control);
         ((TextView) view.findViewById(R.id.tv_code)).setText(Helper.getResString(R.string.myprojects_settings_version_control_title_code));
         ((TextView) view.findViewById(R.id.tv_name)).setText(Helper.getResString(R.string.myprojects_settings_version_control_title_name));
 
@@ -433,7 +433,7 @@ public class MyProjectSettingActivity extends BaseDialogActivity implements View
     }
 
     private void pickColor(int colorIndex) {
-        View view = wB.a(this, R.layout.color_picker);
+        View view = DimensionUtils.inflate(this, R.layout.color_picker);
         view.setAnimation(AnimationUtils.loadAnimation(this, R.anim.abc_fade_in));
         Zx zx = new Zx(view, this, projectThemeColors[colorIndex], false, false);
         zx.a(pickedColor -> {
@@ -579,7 +579,7 @@ public class MyProjectSettingActivity extends BaseDialogActivity implements View
 
         private void initialize(Context context, int tag) {
             setTag(tag);
-            wB.a(context, this, R.layout.myproject_color);
+            DimensionUtils.inflate(context, this, R.layout.myproject_color);
             color = findViewById(R.id.color);
             name = findViewById(R.id.name);
         }

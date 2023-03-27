@@ -30,7 +30,7 @@ or use the appropriate build Gradle command.
 | `a.a.a.Jx` | Generates source code of activities |
 | `a.a.a.Lx` | Generates source code of components, such as listeners, etc. |
 | `a.a.a.Ox` | Responsible for generating XML files of layouts |
-| `a.a.a.qq` | Registry of built-in libraries' dependencies |
+| `a.a.a.BuiltInLibraryUtils` | Registry of built-in libraries' dependencies |
 | `a.a.a.tq` | Responsible for the compiling dialog's quizzes |
 | `a.a.a.yq` | Organizes Sketchware projects' file paths |
 
