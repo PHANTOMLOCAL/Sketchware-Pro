@@ -5,15 +5,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.cardview.widget.CardView;
-
 import com.besome.sketch.beans.ProjectLibraryBean;
+import com.google.android.material.card.MaterialCardView;
 import com.sketchware.remod.R;
 
-import a.a.a.wB;
+import a.a.a.DimensionUtils;
 import a.a.a.xB;
 
-public class LibraryItemView extends CardView {
+public class LibraryItemView extends MaterialCardView {
     protected final Context context;
     protected ImageView icon;
     protected TextView title;
@@ -26,7 +25,7 @@ public class LibraryItemView extends CardView {
     }
 
     public void a(int resLayout) {
-        wB.a(context, this, resLayout);
+        DimensionUtils.inflate(context, this, resLayout);
         icon = findViewById(R.id.lib_icon);
         title = findViewById(R.id.lib_title);
         description = findViewById(R.id.lib_desc);
@@ -34,11 +33,13 @@ public class LibraryItemView extends CardView {
         LayoutParams layoutParams = new LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
-        layoutParams.leftMargin = (int) wB.a(context, 8f);
-        layoutParams.topMargin = (int) wB.a(context, 4f);
-        layoutParams.bottomMargin = (int) wB.a(context, 4f);
-        layoutParams.rightMargin = (int) wB.a(context, 8f);
+        layoutParams.leftMargin = (int) DimensionUtils.dpToPx(context, 8f);
+        layoutParams.topMargin = (int) DimensionUtils.dpToPx(context, 4f);
+        layoutParams.bottomMargin = (int) DimensionUtils.dpToPx(context, 4f);
+        layoutParams.rightMargin = (int) DimensionUtils.dpToPx(context, 8f);
         setLayoutParams(layoutParams);
+
+        setRadius(DimensionUtils.dpToPx(context, 10f));
     }
 
     public void setData(ProjectLibraryBean projectLibraryBean) {
