@@ -74,8 +74,8 @@ import proguard.ProGuard;
 
 public class ProjectBuilder {
     public static final String TAG = "AppBuilder";
-
     private final File aapt2Binary;
+    private final File aaptBinary;
     public BuildSettings build_settings;
     private BuildProgressReceiver progressReceiver;
     private final Context context;
@@ -115,8 +115,9 @@ public class ProjectBuilder {
             LogUtil.d(TAG, "base.apk's size is " + Formatter.formatFileSize(context, fileSizeInBytes) + " (" + fileSizeInBytes + " B)");
         } catch (PackageManager.NameNotFoundException e) {
             LogUtil.e(TAG, "Somehow failed to get package info about us!", e);
-        }
-
+        } 
+        
+        aaptBinary = new File(context.getCacheDir(), "aapt");
         aapt2Binary = new File(context.getCacheDir(), "aapt2");
         build_settings = new BuildSettings(yqVar.sc_id);
         this.context = context;
@@ -142,9 +143,14 @@ public class ProjectBuilder {
      */
     public void compileResources() throws Exception {
         timestampResourceCompilationStarted = System.currentTimeMillis();
+        boolean useAapt2 = buildAppBundle || build_settings.getValue(
+                BuildSettings.SETTING_RESOURCE_PROCESSOR,
+                BuildSettings.SETTING_RESOURCE_PROCESSOR_AAPT
+        ).equals(BuildSettings.SETTING_RESOURCE_PROCESSOR_AAPT2);
         ResourceCompiler compiler = new ResourceCompiler(
+                useAapt2,
                 this,
-                aapt2Binary,
+                useAapt2 ? aapt2Binary : aaptBinary,
                 buildAppBundle,
                 progressReceiver);
         compiler.compile();
@@ -712,22 +718,39 @@ public class ProjectBuilder {
      * @throws By If anything goes wrong while extracting
      */
     public void maybeExtractAapt2() throws By {
-        String aapt2PathInAssets = "aapt/";
-        if (GB.a().toLowerCase().contains("x86")) {
-            aapt2PathInAssets += "aapt2-x86";
+        String abi = GB.a().toLowerCase();
+        String aaptPathInAssets = "aapt/aapt/";
+        String aapt2PathInAssets = "aapt/aapt2/";
+                if (abi.contains("64")) {
+            if (abi.contains("x86")) {
+                aaptPathInAssets += "aapt-x86_64";
+                aapt2PathInAssets += "aapt2-x86_64";
+            } else {
+                aaptPathInAssets += "aapt-arm64";
+                aapt2PathInAssets += "aapt2-arm64";
+            }
         } else {
-            aapt2PathInAssets += "aapt2-arm";
+            if (abi.contains("x86")) {
+                aaptPathInAssets += "aapt-x86";
+                aapt2PathInAssets += "aapt2-x86";
+            } else {
+                aaptPathInAssets += "aapt-arm";
+                aapt2PathInAssets += "aapt2-arm";
+            }
         }
         try {
             if (hasFileChanged(aapt2PathInAssets, aapt2Binary.getAbsolutePath())) {
                 Os.chmod(aapt2Binary.getAbsolutePath(), S_IRUSR | S_IWUSR | S_IXUSR);
             }
+            if (hasFileChanged(aaptPathInAssets, aaptBinary.getAbsolutePath())) {
+                Os.chmod(aaptBinary.getAbsolutePath(), S_IRUSR | S_IWUSR | S_IXUSR);
+            }
         } catch (Exception e) {
-            LogUtil.e(TAG, "Failed to extract AAPT2 binaries", e);
-            throw new By("Couldn't extract AAPT2 binaries! Message: " + e.getMessage());
+            LogUtil.e(TAG, "Failed to extract AAPT/AAPT2 binaries", e);
+            throw new By("Couldn't extract AAPT/AAPT2 binaries! Message: " + e.getMessage());
         }
     }
-
+    
     /**
      * Checks if we need to extract any library/dependency from assets to filesDir,
      * and extracts them, if needed. Also initializes used built-in libraries.
